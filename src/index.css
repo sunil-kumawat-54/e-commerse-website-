@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 93.7%;
+    --foreground: 0 0% 10.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10.2%;
+    --primary: 0 0% 10.2%;
+    --primary-foreground: 0 0% 93.7%;
+    --secondary: 30 26% 64%;
+    --secondary-foreground: 0 0% 10.2%;
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 30 26% 64%;
+    --accent-foreground: 0 0% 10.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 30 26% 64%;
+    --radius: 0.25rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .char-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    height: 0.85em;
+  }
+
+  .char-inner {
+    display: inline-block;
+    will-change: transform;
+  }
+
+  .stitch-border {
+    border: 2px dashed #C4A882;
+  }
+
+  .stitch-line {
+    background: #C4A882;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .blend-difference {
+    mix-blend-mode: difference;
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 25s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
