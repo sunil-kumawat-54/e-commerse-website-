@@ -1,1 +1,9 @@
-[build]\ncommand = "npm run build"\npublish = "dist"\ncache = false
+[build]
+  base = ""
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
