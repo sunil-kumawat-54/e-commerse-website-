@@ -1,5 +1,3 @@
-import { useEffect, useRef } from 'react';
-
 export default function MarqueeBanner() {
   const words = [
     "HANDCRAFTED", "FULL-GRAIN LEATHER", "WAXED THREAD", 

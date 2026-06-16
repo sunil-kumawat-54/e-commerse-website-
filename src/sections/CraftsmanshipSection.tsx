@@ -28,7 +28,7 @@ export default function CraftsmanshipSection() {
     });
 
     // Stagger cards
-    cardsRef.current.forEach((card, i) => {
+    cardsRef.current.forEach((card) => {
       if (!card) return;
       gsap.fromTo(card, 
         { y: 100, opacity: 0 },
@@ -105,14 +105,14 @@ export default function CraftsmanshipSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-          {features.map((feat, i) => (
+          {features.map((feat, index) => (
             <div 
-              key={i}
-              ref={el => { cardsRef.current[i] = el; }}
+              key={index}
+              ref={el => { cardsRef.current[index] = el; }}
               className="group relative"
             >
               {/* Vertical line connector (desktop only) */}
-              {i !== 2 && (
+              {index !== 2 && (
                 <div className="hidden md:block absolute top-12 right-[-24px] lg:right-[-32px] w-[1px] h-24 bg-[#333]" />
               )}
               
